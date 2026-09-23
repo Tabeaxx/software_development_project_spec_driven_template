@@ -70,7 +70,7 @@ MVP.
 
 - [X] T012 [P] Update `specs/001-add-tasks/quickstart.md` with any observed browser-specific validation notes or known limitations
 - [X] T013 [P] Review `dashboard/src/index.html` for semantic labels, keyboard access, and feedback semantics against `specs/001-add-tasks/contracts/ui.md`
-- [ ] T014 Run `git diff --check` for `dashboard/src/` and `specs/001-add-tasks/`, then record the completed Add Tasks increment in a meaningful Git commit
+- [X] T014 Run `git diff --check` for `dashboard/src/` and `specs/001-add-tasks/`, then record the completed Add Tasks increment in a meaningful Git commit
 
 ---
 
