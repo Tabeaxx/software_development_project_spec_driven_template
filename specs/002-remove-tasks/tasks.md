@@ -72,7 +72,7 @@ MVP.
 
 - [X] T014 [P] Update `specs/002-remove-tasks/quickstart.md` with observed browser validation notes and known session-only removal limitations
 - [X] T015 [P] Review `dashboard/src/index.html`, `dashboard/src/styles.css`, and `dashboard/src/script.js` against `specs/002-remove-tasks/contracts/ui.md` and the project constitution
-- [ ] T016 Run `git diff --check` for `dashboard/src/` and `specs/002-remove-tasks/`, then record the completed Remove Tasks increment in a meaningful Git commit
+- [X] T016 Run `git diff --check` for `dashboard/src/` and `specs/002-remove-tasks/`, then record the completed Remove Tasks increment in a meaningful Git commit
 
 ---
 
