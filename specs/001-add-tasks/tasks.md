@@ -19,8 +19,8 @@ so the MVP is the complete Add Tasks flow.
 **Purpose**: Confirm the existing single-page entry point and asset links before
 implementing the feature.
 
-- [ ] T001 Confirm the dashboard entry point and linked assets in `dashboard/src/index.html`, `dashboard/src/styles.css`, and `dashboard/src/script.js`
-- [ ] T002 [P] Review the Add Tasks UI contract and acceptance scenarios in `specs/001-add-tasks/contracts/ui.md` and `specs/001-add-tasks/spec.md`
+- [X] T001 Confirm the dashboard entry point and linked assets in `dashboard/src/index.html`, `dashboard/src/styles.css`, and `dashboard/src/script.js`
+- [X] T002 [P] Review the Add Tasks UI contract and acceptance scenarios in `specs/001-add-tasks/contracts/ui.md` and `specs/001-add-tasks/spec.md`
 
 ---
 
@@ -29,8 +29,8 @@ implementing the feature.
 **Purpose**: Establish the shared DOM and session-state structure required by the
 task-entry interaction.
 
-- [ ] T003 Add the labeled task description field, Add button, task list container, and feedback region in `dashboard/src/index.html`
-- [ ] T004 [P] Add responsive layout, task-list, button, focus, and validation-feedback styles in `dashboard/src/styles.css`
+- [X] T003 Add the labeled task description field, Add button, task list container, and feedback region in `dashboard/src/index.html`
+- [X] T004 [P] Add responsive layout, task-list, button, focus, and validation-feedback styles in `dashboard/src/styles.css`
 
 **Checkpoint**: The page contains all UI targets and is ready for the feature
 behavior.
@@ -48,16 +48,16 @@ input and confirm no task is added and feedback is shown.
 
 ### Implementation for User Story 1
 
-- [ ] T005 [US1] Create the in-memory ordered task collection and task rendering helper in `dashboard/src/script.js`
-- [ ] T006 [US1] Handle the Add action in `dashboard/src/script.js` by reading the input, trimming outer whitespace, appending valid tasks, and updating the list immediately
-- [ ] T007 [US1] Reject empty and whitespace-only descriptions in `dashboard/src/script.js`, preserve the existing list, and expose clear feedback through the feedback region
-- [ ] T008 [US1] Render user descriptions as text content and preserve existing tasks when appending new items in `dashboard/src/script.js`
-- [ ] T009 [US1] Support repeated task additions and keep the user on the current page in `dashboard/src/index.html` and `dashboard/src/script.js`
+- [X] T005 [US1] Create the in-memory ordered task collection and task rendering helper in `dashboard/src/script.js`
+- [X] T006 [US1] Handle the Add action in `dashboard/src/script.js` by reading the input, trimming outer whitespace, appending valid tasks, and updating the list immediately
+- [X] T007 [US1] Reject empty and whitespace-only descriptions in `dashboard/src/script.js`, preserve the existing list, and expose clear feedback through the feedback region
+- [X] T008 [US1] Render user descriptions as text content and preserve existing tasks when appending new items in `dashboard/src/script.js`
+- [X] T009 [US1] Support repeated task additions and keep the user on the current page in `dashboard/src/index.html` and `dashboard/src/script.js`
 
 ### Testing for User Story 1
 
-- [ ] T010 [US1] Run the Add Tasks acceptance scenarios from `specs/001-add-tasks/quickstart.md` against `dashboard/src/index.html`, including valid, empty, whitespace-only, repeated, keyboard, and special-character input
-- [ ] T011 [US1] Verify JavaScript syntax and inspect browser console output for errors in `dashboard/src/script.js`
+- [X] T010 [US1] Run the Add Tasks acceptance scenarios from `specs/001-add-tasks/quickstart.md` against `dashboard/src/index.html`, including valid, empty, whitespace-only, repeated, keyboard, and special-character input
+- [X] T011 [US1] Verify JavaScript syntax and inspect browser console output for errors in `dashboard/src/script.js`
 
 **Checkpoint**: User Story 1 is independently functional and demonstrable as the
 MVP.
@@ -68,8 +68,8 @@ MVP.
 
 **Purpose**: Document the completed implementation and perform final quality checks.
 
-- [ ] T012 [P] Update `specs/001-add-tasks/quickstart.md` with any observed browser-specific validation notes or known limitations
-- [ ] T013 [P] Review `dashboard/src/index.html` for semantic labels, keyboard access, and feedback semantics against `specs/001-add-tasks/contracts/ui.md`
+- [X] T012 [P] Update `specs/001-add-tasks/quickstart.md` with any observed browser-specific validation notes or known limitations
+- [X] T013 [P] Review `dashboard/src/index.html` for semantic labels, keyboard access, and feedback semantics against `specs/001-add-tasks/contracts/ui.md`
 - [ ] T014 Run `git diff --check` for `dashboard/src/` and `specs/001-add-tasks/`, then record the completed Add Tasks increment in a meaningful Git commit
 
 ---

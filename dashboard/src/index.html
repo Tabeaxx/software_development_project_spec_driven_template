@@ -3,22 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>Task Dashboard</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="./script.js" defer></script>
 </head>
 <body>
   <main class="dashboard" aria-labelledby="dashboard-title">
     <header class="dashboard__header">
-      <p class="eyebrow">Overview</p>
-      <h1 id="dashboard-title">Dashboard</h1>
-      <p class="dashboard__intro">A simple starting point for the application.</p>
+      <p class="eyebrow">Today</p>
+      <h1 id="dashboard-title">Task dashboard</h1>
+      <p class="dashboard__intro">Keep the next useful thing close at hand.</p>
     </header>
 
-    <section class="status-panel" aria-labelledby="status-title">
-      <h2 id="status-title">Application status</h2>
-      <p id="status-message">Ready to get started.</p>
-      <button id="status-button" type="button">Check status</button>
+    <section class="task-panel" aria-labelledby="task-panel-title">
+      <div class="task-panel__heading">
+        <div>
+          <p class="eyebrow">Your list</p>
+          <h2 id="task-panel-title">Add a task</h2>
+        </div>
+        <span id="task-count" class="task-count">0 tasks</span>
+      </div>
+
+      <form id="task-form" class="task-form" novalidate>
+        <label for="task-description">Task description</label>
+        <div class="task-form__controls">
+          <input id="task-description" name="description" type="text" autocomplete="off" required>
+          <button type="submit">Add task</button>
+        </div>
+        <p id="task-feedback" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+
+      <ul id="task-list" class="task-list" aria-label="Task list"></ul>
     </section>
   </main>
 </body>

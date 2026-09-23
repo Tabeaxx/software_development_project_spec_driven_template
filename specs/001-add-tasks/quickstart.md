@@ -42,3 +42,10 @@
 1. Use keyboard navigation to focus the input and Add control.
 2. Add `Review <today>`.
 3. Confirm the exact text is displayed as text and is not interpreted as markup.
+
+## Validation Notes
+
+- Validated in a current browser on 2026-09-23 using the local `file://` entry point.
+- Empty and whitespace-only submissions preserve the existing list and show feedback.
+- Task descriptions are rendered as text, so angle brackets are not interpreted as markup.
+- Tasks are session-only and are cleared when the page is refreshed.
