@@ -4,18 +4,40 @@ const taskList = document.querySelector('#task-list');
 const taskFeedback = document.querySelector('#task-feedback');
 const taskCount = document.querySelector('#task-count');
 const tasks = [];
+let nextTaskId = 1;
 
 function renderTasks() {
   taskList.replaceChildren();
 
   tasks.forEach((task) => {
     const taskItem = document.createElement('li');
+    const taskText = document.createElement('span');
+    const doneButton = document.createElement('button');
+
     taskItem.className = 'task-item';
-    taskItem.textContent = task.description;
+    taskText.textContent = task.description;
+    doneButton.type = 'button';
+    doneButton.className = 'done-button';
+    doneButton.textContent = 'Done';
+    doneButton.setAttribute('aria-label', `Done: ${task.description}`);
+    doneButton.addEventListener('click', () => removeTask(task.id));
+
+    taskItem.append(taskText, doneButton);
     taskList.append(taskItem);
   });
 
   taskCount.textContent = `${tasks.length} ${tasks.length === 1 ? 'task' : 'tasks'}`;
+}
+
+function removeTask(taskId) {
+  const taskIndex = tasks.findIndex((task) => task.id === taskId);
+
+  if (taskIndex === -1) {
+    return;
+  }
+
+  tasks.splice(taskIndex, 1);
+  renderTasks();
 }
 
 function showFeedback(message, type) {
@@ -34,7 +56,8 @@ taskForm.addEventListener('submit', (event) => {
     return;
   }
 
-  tasks.push({ description });
+  tasks.push({ id: nextTaskId, description });
+  nextTaskId += 1;
   renderTasks();
   showFeedback('Task added.', 'success');
   taskForm.reset();

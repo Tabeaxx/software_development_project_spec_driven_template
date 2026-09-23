@@ -134,9 +134,29 @@ input:focus-visible {
 }
 
 .task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 0.85rem 1rem;
   border-left: 4px solid #d19a52;
   background: #f4f1eb;
+}
+
+.task-item span {
+  overflow-wrap: anywhere;
+}
+
+.done-button {
+  flex-shrink: 0;
+  padding: 0.5rem 0.75rem;
+  background: #356b43;
+  font-size: 0.9rem;
+}
+
+.done-button:hover,
+.done-button:focus-visible {
+  background: #285333;
 }
 
 button {
